@@ -96,9 +96,11 @@ public class Fenetre extends JFrame {
             double Euros = Double.parseDouble(EuroField.getText());
             
             if (CHFRad.isSelected()==true){
-                
+                Euros = CHF / 1.1;
+                EuroField.setText(Double.toString(Euros));
             }else{
-                
+                CHF = Euros * 1.1;
+                CHFField.setText(Double.toString(CHF));
             }
         }
     }
